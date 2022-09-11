@@ -1,0 +1,114 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+header{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+    width: 40px;
+}
+ul li{
+  display: inline-block;
+  margin: 0px 10px;
+}
+ul li a{
+  color: white;
+  text-decoration: none;
+}
+/*================================END HAEDER======================================================*/
+/*================================CONTENT======================================================*/
+.content{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .text{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  color: white;
+}
+.content .text h2{
+  font-size: 40px;
+  text-transform: uppercase;
+  
+}
+.content .text p{
+  font-size: 18px;
+  margin: 20px 0px;
+}
+.content .text a{
+    text-decoration: none;
+    width: fit-content;
+    color: black;
+    font-size: x-large;
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: .5s;
+}
+.content .text a:hover{
+  color: white;
+  background-color: black;
+}
+.content .image{
+  width: 30%;
+}
+.content .image img{
+  width: 180px;
+}
+/*======================ICONS=================================*/
+.icons{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icons img{
+  width: 40px;
+  transition: .5s;
+  cursor: pointer;
+}
+.icons img:hover{
+  transform: scale(1.2);
+}
+/*===========================MEDIA QUERY================================*/
+@media(max-width:675px){
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  ul{
+    width: max-content;
+  }
+  .content{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.content .text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.content .image {
+    width: auto;
+}
+.icons {
+    display: contents;
+}
+}
